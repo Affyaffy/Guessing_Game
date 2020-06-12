@@ -2,7 +2,7 @@
 
 echo "Welcome to Guessing game"
 
-function ask {
+function guessed {
 	echo "Please guess the number of files in the current directory:"
 	read guess
     files=$(ls -1 | wc -l)
@@ -18,8 +18,8 @@ do
 	else
 		echo "Too high."
 	fi
-	ask
+	guessed
 done
 
-echo "Congratulations! You have guessd the number of file correctly. Here is the number of files:"
+echo "Congratulations! You have guessed the number of file correctly. Here is the number of files:"
 echo "---" && ls -1
